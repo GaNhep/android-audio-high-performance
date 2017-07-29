@@ -123,11 +123,13 @@ void EchoAudioEngine::stopStreams() {
   if (recordingStream_ != nullptr) {
     stopStream(recordingStream_);
     closeStream(recordingStream_);
+    recordingStream_ = nullptr;
   }
 
   if (playStream_ != nullptr) {
     stopStream(playStream_);
     closeStream(playStream_);
+    playStream_ = nullptr;
   }
 }
 
